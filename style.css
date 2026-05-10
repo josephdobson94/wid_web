@@ -496,6 +496,24 @@ footer .footer-logo {
         font-size: 16px;
     }
 
+    #about-hero {
+        padding: 40px 24px;
+        min-height: 60vh;
+        align-items: center;
+    }
+
+    #about-hero h2 {
+        font-size: 38px;
+    }
+
+    #about-hero h4 {
+        font-size: 22px;
+    }
+
+    #about-hero p {
+        font-size: 16px;
+    }
+
     #slogan {
         padding: 90px 24px 36px;
     }
@@ -571,6 +589,25 @@ footer .footer-logo {
         padding: 10px 22px;
     }
 
+    #about-hero {
+        padding: 30px 16px;
+        min-height: 55vh;
+    }
+
+    #about-hero h2 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    #about-hero h4 {
+        font-size: 18px;
+    }
+
+    #about-hero p {
+        font-size: 15px;
+        margin-bottom: 18px;
+    }
+
     #slogan {
         padding: 60px 16px 28px;
     }
@@ -637,6 +674,24 @@ footer .footer-logo {
 
     #hero p,
     #hero .btn {
+        font-size: 15px;
+    }
+
+    #about-hero {
+        padding: 28px 18px;
+        min-height: 50vh;
+    }
+
+    #about-hero h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    #about-hero h4 {
+        font-size: 20px;
+    }
+
+    #about-hero p {
         font-size: 15px;
     }
 

@@ -1,0 +1,655 @@
+@import url(https://fonts.googleapis.com/css2?family=Spartan:wght@400;600;700&display=swap);
+
+:root {
+    --default-text-color: #222;
+    --alt-default-text-color: #e4e4e4;
+    --accent-color: #e09e9e;
+    --accent-color-hover: #d36868;
+    --default-font: 'Spartan', sans-serif;
+    --header-bg-color: #ffffff;
+    --active-link-color: #a09494;
+    --body-bg-color: #d6d0d0;
+    --shadow: rgba(0, 0, 0, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--default-font);
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: var(--default-text-color);
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: var(--default-text-color);
+}
+
+h3 {
+    font-size: 36px;
+    line-height: 44px;
+    color: var(--default-text-color);
+}
+
+h4 {
+    font-size: 28px;
+    line-height: 36px;
+    color: var(--default-text-color);
+}
+
+h5 {
+    font-size: 22px;
+    line-height: 30px;
+    color: var(--default-text-color);
+}
+
+h6 {
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--default-text-color);
+}
+
+body {
+    background-color: var(--body-bg-color);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--default-text-color);
+}
+
+/*------------------------Header---------------------------*/
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-bg-color);
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px var(--shadow);
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#header .header-logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 30px; */
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+}
+
+#navbar li a {
+    text-decoration: none;
+    color: var(--default-text-color);
+    font-size: 20px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+#navbar li a:hover{
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+}
+
+#navbar li a.active {
+    color: var(--active-link-color);
+    border-bottom: 2px solid var(--active-link-color);
+    padding-bottom: 5px;
+}
+
+#menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: var(--default-text-color);
+}
+
+/* Mobile dropdown menu */
+@media (max-width: 768px) {
+    #navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--header-bg-color);
+        padding: 12px 0 16px;
+        box-shadow: 0 5px 15px var(--shadow);
+    }
+
+    #navbar.open {
+        display: flex;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    #header {
+        position: relative;
+    }
+
+    #navbar li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #navbar li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/*------------------------Divider---------------------------*/
+
+#divider {
+    height: 25px;
+}
+
+/*------------------------Footer---------------------------*/
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 80px;
+}
+
+footer p {
+    color: var(--default-text-color);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer h3 {
+    color: var(--default-text-color);
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+footer .logo {
+    display: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 20%;
+}
+
+footer .contact {
+    width: 75%;
+}
+
+footer .footer-logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+/*------------------------Home Page---------------------------*/
+
+/*Hero Section*/
+#hero{
+    background-image: url('images/hero bg.jpg');
+    height: 70vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    padding: 50px 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+#hero h4 {
+    color: var(--accent-color);
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px var(--shadow);
+}
+
+#hero h2 {
+    color: var(--accent-color);
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px var(--shadow);
+}
+
+#hero p {
+    color: var(--alt-default-text-color);
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px var(--shadow);
+}
+
+#hero .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--accent-color);
+    color: var(--alt-default-text-color);
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px color-mix(in srgb, var(--accent-color) 40%, transparent);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#hero .btn:hover {
+    background-color: var(--accent-color-hover);
+    box-shadow: 0 0 10px color-mix(in srgb, var(--shadow) 100%, transparent);
+}
+
+/*Slogan Section*/
+#slogan {
+    background-image: url('images/slogan bg.jpg');
+    min-height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    padding: 120px 80px 40px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#slogan h1 {
+    color: var(--alt-default-text-color);
+    font-size: 150px;
+    line-height: 150px;
+    text-shadow: 0 0 10px var(--shadow), 0 0 20px var(--shadow);
+    margin-bottom: 0px;
+    
+}
+
+#slogan .slogan-text {
+    color: var(--accent-color);
+}
+
+#slogan h3 {
+    color: var(--alt-default-text-color);
+    mix-blend-mode: normal;
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px var(--shadow);
+}
+
+#slogan .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--accent-color);
+    color: var(--alt-default-text-color);
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px color-mix(in srgb, var(--accent-color) 40%, transparent);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#slogan .btn:hover {
+    background-color: var(--accent-color-hover);
+    box-shadow: 0 0 10px color-mix(in srgb, var(--shadow) 100%, transparent);
+}
+
+/*------------------------Products Page---------------------------*/
+
+/*Page Name Section*/
+#page-name {
+    padding: 60px 80px 30px;
+    text-align: center;
+}
+
+/*Products Section*/
+#products{
+    padding: 30px 80px;
+    background-color: var(--header-bg-color);
+}
+
+#products .pro-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+#products .pro {
+    width: calc(25% - 15px);
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid var(--shadow);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    margin: 15px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* Remove max-height or increase it */
+}
+
+#products .pro img {
+    width: 100%;
+    height: 200px; /* Use fixed height instead of % */
+    object-fit: cover; /* Prevents distortion */
+    border-radius: 20px;
+}
+
+#products .pro .des {
+    flex-grow: 1; /* Pushes link to bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+#products .pro a {
+    margin-top: auto; /* Ensures link stays at bottom */
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--default-text-color);
+    transition: color 0.3s ease;
+}
+
+#products .pro a:hover {
+    color: var(--accent-color);
+}
+
+/*Pagination Section*/
+#pagination {
+    background-color: var(--header-bg-color);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+#pagination a {
+    text-decoration: none;
+    color: var(--alt-default-text-color);
+    background-color: var(--accent-color);
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 50px;
+}
+
+#pagination a:hover {
+    background-color: var(--accent-color-hover);
+}
+
+#pagination a.active {
+    background-color: var(--active-link-color);
+}
+
+/*------------------------About Page---------------------------*/
+/*About Hero Section*/
+#about-hero{
+    background-image: url('images/about hero bg.jpg');
+    height: 70vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    padding: 50px 500px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+#about-hero h4 {
+    color: var(--accent-color);
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px var(--shadow);
+    text-align: center;
+}
+
+#about-hero h2 {
+    color: var(--accent-color);
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 10px var(--shadow);
+}
+
+#about-hero p {
+    color: var(--alt-default-text-color);
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-shadow: 0px 0px 10px var(--shadow);
+}
+
+/*------------------------Responsive Design---------------------------*/
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    #header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 18px 24px;
+        gap: 16px;
+    }
+
+    #navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #navbar li {
+        padding: 10px 12px;
+    }
+
+    #hero {
+        padding: 40px 24px;
+        min-height: 60vh;
+        align-items: center;
+    }
+
+    #hero h2 {
+        font-size: 38px;
+    }
+
+    #hero h4 {
+        font-size: 22px;
+    }
+
+    #hero p,
+    #hero .btn {
+        font-size: 16px;
+    }
+
+    #slogan {
+        padding: 90px 24px 36px;
+    }
+
+    #slogan h1 {
+        font-size: 100px;
+        line-height: 108px;
+    }
+
+    #slogan h3 {
+        font-size: 30px;
+    }
+
+    footer {
+        padding: 30px 24px;
+    }
+
+    footer .logo,
+    footer .contact {
+        width: 100%;
+    }
+
+    #products {
+        padding: 30px 24px;
+    }
+
+    #products .pro-container {
+        justify-content: center;
+    }
+
+    #products .pro {
+        width: calc(50% - 10px);
+    }
+
+    #pagination {
+        padding: 20px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    #header {
+        padding: 14px 16px;
+    }
+
+    #header .header-logo {
+        width: 100px;
+    }
+
+    #navbar li {
+        padding: 8px 10px;
+    }
+
+    #hero {
+        padding: 30px 16px;
+        min-height: 55vh;
+    }
+
+    #hero h2 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    #hero h4 {
+        font-size: 18px;
+    }
+
+    #hero p {
+        font-size: 15px;
+        margin-bottom: 18px;
+    }
+
+    #hero .btn {
+        padding: 10px 22px;
+    }
+
+    #slogan {
+        padding: 60px 16px 28px;
+    }
+
+    #slogan h1 {
+        font-size: 52px;
+        line-height: 60px;
+    }
+
+    #slogan h3 {
+        font-size: 22px;
+    }
+
+    footer {
+        padding: 20px 16px;
+    }
+
+    footer p,
+    footer h3 {
+        font-size: 18px;
+    }
+
+    #products {
+        padding: 20px 16px;
+    }
+
+    #products .pro-container {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #products .pro {
+        width: calc(100% - 10px);
+        max-width: 280px;
+    }
+
+    #products .pro img {
+        height: 180px;
+    }
+
+    #pagination {
+        padding: 15px 16px;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    #header {
+        padding: 14px 18px;
+    }
+
+    #hero {
+        padding: 28px 18px;
+        min-height: 50vh;
+    }
+
+    #hero h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    #hero h4 {
+        font-size: 20px;
+    }
+
+    #hero p,
+    #hero .btn {
+        font-size: 15px;
+    }
+
+    #slogan {
+        padding: 60px 18px 24px;
+    }
+
+    #slogan h1 {
+        font-size: 64px;
+        line-height: 72px;
+    }
+
+    #slogan h3 {
+        font-size: 24px;
+    }
+}
